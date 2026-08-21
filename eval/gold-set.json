@@ -1,0 +1,403 @@
+{
+  "eval_name": "tpn-conformance-gold-set",
+  "version": "1.2",
+  "spec_version": "4.2",
+  "note": "All four source drafts feed one campaign, so they share one target output. Grade conformance against target_output, violation detection against expected_violations, and fact checking against campaign_facts. campaign_facts uses the flat 15-field runtime schema shared by extract.md, conform.md, grade.md, and the app form. All paths are relative to the repo root and listed in file_map.",
+  "campaign_facts": {
+    "campaign_name": "Q3 SPI refresh",
+    "type": "policy change",
+    "effective_date": "1 October",
+    "action_deadline": "26 September",
+    "measurement_window": "1 July through 30 September",
+    "module_duration": "20 minutes",
+    "module_location": "Partner Learning Center",
+    "tier_1_threshold": "92 to 94",
+    "tier_2_threshold": "85 to 88",
+    "tier_3_threshold": "unchanged at 78",
+    "incentive": "none for Q3",
+    "cta_url": "https://portal.truckingpartnernetwork.com/academy/spi-methodology?utm_source=marketo&utm_medium=email&utm_campaign=tpn-spi-q3-refresh&utm_content=primary-cta",
+    "utm_campaign": "tpn-spi-q3-refresh",
+    "segment": null,
+    "unchanged_items": "Driver Vehicle Inspection Report submission standards"
+  },
+  "target_output": {
+    "subject_line": "Safety score changes effective 1 October",
+    "subject_char_count": 40,
+    "preview_text": "A required 20-minute module is due 26 September",
+    "preview_char_count": 47,
+    "body": "We are changing how we calculate the Safety Performance Index (SPI). The revised scoring model takes effect **1 October**. All Partners must complete a required training module by **26 September**.\n\nWe recalibrated the model after our most recent network review. Following-distance and hours-of-service events now carry more weight. Hard-braking events carry less, because the previous weighting produced false positives for Partners running dense metro lanes.\n\nThreshold changes:\n\n- Tier 1 moves from 92 to 94\n- Tier 2 moves from 85 to 88\n- Tier 3 stays at 78\n\nWe calculate scores on a rolling 90-day window. The current window runs 1 July through 30 September.\n\nWe will not rescore past performance under the revised model. Your first score under the new weighting publishes 15 October.\n\nThe Partner Learning Center (PLC) module covers the recalibration method, how to read the revised scorecard, and what drives each weighted component. It runs 20 minutes.\n\nIf we have not recorded your completion, we hold you at your current tier until we do. That affects Load Acceptance Rate (LAR) prioritization.\n\nDriver Vehicle Inspection Report submission standards do not change.\n\nComplete the module by **26 September**.",
+    "body_word_count": 191,
+    "cta_text": "SPI methodology module",
+    "cta_url": "https://portal.truckingpartnernetwork.com/academy/spi-methodology?utm_source=marketo&utm_medium=email&utm_campaign=tpn-spi-q3-refresh&utm_content=primary-cta",
+    "footer_version": "4.2"
+  },
+  "cases": [
+    {
+      "id": "case-01-agency",
+      "source_file": "drafts/agency.md",
+      "difficulty": "high volume, obvious violations",
+      "expected_violations": [
+        {
+          "rule_id": "S-01",
+          "evidence": "subject line is 76 characters"
+        },
+        {
+          "rule_id": "S-02",
+          "evidence": "subject line contains 'Your'"
+        },
+        {
+          "rule_id": "S-03",
+          "evidence": "preview text restates the subject line"
+        },
+        {
+          "rule_id": "S-07",
+          "evidence": "deadline stated once, not twice"
+        },
+        {
+          "rule_id": "V-01",
+          "evidence": "'TPN has recalibrated', 'TPN has developed', third person"
+        },
+        {
+          "rule_id": "V-03",
+          "evidence": "'the new model will be utilized'"
+        },
+        {
+          "rule_id": "V-04",
+          "evidence": "'industry-leading', 'best-in-class'"
+        },
+        {
+          "rule_id": "V-05",
+          "evidence": "six exclamation points"
+        },
+        {
+          "rule_id": "V-08",
+          "evidence": "'Please be advised that completion is required'"
+        },
+        {
+          "rule_id": "V-09",
+          "evidence": "'Exciting News', 'We're thrilled'"
+        },
+        {
+          "rule_id": "T-01",
+          "evidence": "'Carriers', 'carrier network' used three times"
+        },
+        {
+          "rule_id": "T-04",
+          "evidence": "SPI and PSM used without first-use expansion"
+        },
+        {
+          "rule_id": "T-07",
+          "evidence": "'the Academy' instead of Partner Learning Center"
+        },
+        {
+          "rule_id": "F-01",
+          "evidence": "'October 1', 'September 26'"
+        },
+        {
+          "rule_id": "F-07",
+          "evidence": "title case headers 'What's Changing', 'What You Need To Do'"
+        },
+        {
+          "rule_id": "A-01",
+          "evidence": "'Click here to get started'"
+        },
+        {
+          "rule_id": "A-02",
+          "evidence": "CTA is five words and begins with a verb"
+        },
+        {
+          "rule_id": "A-04",
+          "evidence": "no UTM parameters present"
+        },
+        {
+          "rule_id": "R-02",
+          "evidence": "footer block is not version 4.2"
+        },
+        {
+          "rule_id": "R-04",
+          "evidence": "measurement window not stated"
+        },
+        {
+          "rule_id": "R-05",
+          "evidence": "unsubscribe and manage preferences language present"
+        },
+        {
+          "rule_id": "R-06",
+          "evidence": "module duration not stated"
+        },
+        {
+          "rule_id": "APPENDIX-A",
+          "evidence": "click here, best-in-class, industry-leading, seamless, utilized, exciting news, we're thrilled, please be advised, don't hesitate, reach out, at your earliest convenience, going forward, carriers"
+        }
+      ],
+      "missing_facts": [
+        "measurement window",
+        "module duration",
+        "Tier 3 threshold",
+        "no retroactive rescoring",
+        "first new score date",
+        "non-completion consequence",
+        "DVIR unchanged"
+      ]
+    },
+    {
+      "id": "case-02-recycled",
+      "source_file": "drafts/recycled-q2.md",
+      "difficulty": "adversarial, passes most style rules and fails on staleness",
+      "expected_violations": [
+        {
+          "rule_id": "V-01",
+          "evidence": "'TPN is updating', 'TPN has adjusted', 'TPN will hold'"
+        },
+        {
+          "rule_id": "S-07",
+          "evidence": "deadline stated once, not twice"
+        },
+        {
+          "rule_id": "A-04",
+          "evidence": "link carries no UTM parameters"
+        },
+        {
+          "rule_id": "R-02",
+          "evidence": "footer block is version 3.8"
+        },
+        {
+          "rule_id": "L-04",
+          "evidence": "incentive terms present with no [LEGAL] flag"
+        },
+        {
+          "rule_id": "L-06",
+          "evidence": "'Partners in good standing' characterizes Partner standing"
+        }
+      ],
+      "expected_staleness_flags": [
+        {
+          "field": "effective_date",
+          "found": "1 July",
+          "should_be": "1 October",
+          "verdict": "mismatch"
+        },
+        {
+          "field": "action_deadline",
+          "found": "27 June",
+          "should_be": "26 September",
+          "verdict": "mismatch"
+        },
+        {
+          "field": "tier_1_threshold",
+          "found": "90 to 92",
+          "should_be": "92 to 94",
+          "verdict": "mismatch"
+        },
+        {
+          "field": "tier_2_threshold",
+          "found": "82 to 85",
+          "should_be": "85 to 88",
+          "verdict": "mismatch"
+        },
+        {
+          "field": "measurement_window",
+          "found": "1 January through 31 March",
+          "should_be": "1 July through 30 September",
+          "verdict": "mismatch"
+        },
+        {
+          "field": "module_duration",
+          "found": "15 minutes",
+          "should_be": "20 minutes",
+          "verdict": "mismatch"
+        },
+        {
+          "field": "incentive",
+          "found": "Q2 completion incentive block",
+          "should_be": "none for Q3",
+          "verdict": "mismatch"
+        },
+        {
+          "field": "utm_campaign",
+          "found": "tpn-spi-q2-refresh",
+          "should_be": "tpn-spi-q3-refresh",
+          "verdict": "mismatch"
+        }
+      ],
+      "note": "This case exists to prove that style conformance and factual currency are different problems. A grader that only sees the voice spec will pass most of this email.",
+      "expected_fact_mismatch_count": 8
+    },
+    {
+      "id": "case-03-sme",
+      "source_file": "drafts/sme-notes.md",
+      "difficulty": "correct facts, wrong form",
+      "expected_violations": [
+        {
+          "rule_id": "S-01",
+          "evidence": "subject line uses an ampersand style and unexpanded acronym"
+        },
+        {
+          "rule_id": "S-03",
+          "evidence": "no preview text supplied"
+        },
+        {
+          "rule_id": "S-04",
+          "evidence": "380 words against a 350 limit"
+        },
+        {
+          "rule_id": "S-05",
+          "evidence": "no call to action present"
+        },
+        {
+          "rule_id": "S-06",
+          "evidence": "opens with background rather than the change"
+        },
+        {
+          "rule_id": "S-07",
+          "evidence": "deadline stated once"
+        },
+        {
+          "rule_id": "S-08",
+          "evidence": "paragraphs run four and five sentences"
+        },
+        {
+          "rule_id": "V-01",
+          "evidence": "no first person plural anywhere, all third person and passive"
+        },
+        {
+          "rule_id": "V-03",
+          "evidence": "'has been recalibrated', 'will be applied', 'It should be noted', 'has been developed'"
+        },
+        {
+          "rule_id": "V-07",
+          "evidence": "multiple sentences exceed 35 words"
+        },
+        {
+          "rule_id": "T-01",
+          "evidence": "'partners' lowercase throughout"
+        },
+        {
+          "rule_id": "T-04",
+          "evidence": "SPI, PLC, PSM, LAR used without expansion"
+        },
+        {
+          "rule_id": "T-05",
+          "evidence": "HOS and DVIR are not on the approved list and must be spelled out in full"
+        },
+        {
+          "rule_id": "F-01",
+          "evidence": "'10/1', '7/1', '9/30', '10/15', '9/26'"
+        },
+        {
+          "rule_id": "A-04",
+          "evidence": "no link supplied"
+        },
+        {
+          "rule_id": "R-01",
+          "evidence": "no Partner Support line"
+        },
+        {
+          "rule_id": "R-02",
+          "evidence": "no footer block"
+        },
+        {
+          "rule_id": "R-03",
+          "evidence": "effective date not bold in first paragraph"
+        }
+      ],
+      "note": "Facts are correct and complete. This is the inverse of case-02."
+    },
+    {
+      "id": "case-04-bullets",
+      "source_file": "drafts/bullets.md",
+      "difficulty": "fragments, requires generation not just conformance",
+      "expected_violations": [
+        {
+          "rule_id": "S-04",
+          "evidence": "not prose, no body copy exists"
+        },
+        {
+          "rule_id": "S-06",
+          "evidence": "no opening line"
+        },
+        {
+          "rule_id": "V-03",
+          "evidence": "fragments have no voice to evaluate"
+        },
+        {
+          "rule_id": "F-01",
+          "evidence": "'Oct 1', '9/26', 'July 1 - Sept 30', 'Sept 30'"
+        },
+        {
+          "rule_id": "A-04",
+          "evidence": "no link supplied"
+        },
+        {
+          "rule_id": "R-02",
+          "evidence": "no footer block"
+        }
+      ],
+      "expected_behavior": "Tool should flag this input as below the conformance threshold and route to human drafting rather than attempting a full generation. Passing this case means correctly declining it.",
+      "note": "Contains a tone constraint that exists nowhere in the spec: prior SPI sends were read as threatening and generated escalations. A conformance grader cannot catch this. Human review only."
+    }
+  ],
+  "spec_gaps_found": [
+    {
+      "gap": "Tier labels are numbers under 10 and F-05 does not say whether Tier 1 or Tier one is correct.",
+      "resolution": "Add F-12: tier designations are proper nouns and always use numerals.",
+      "why_it_matters": "Without this the grader guesses, and it will guess differently across runs."
+    },
+    {
+      "gap": "T-04 requires first-use expansion but does not say whether the subject line counts as first use.",
+      "resolution": "Add T-10: subject line and preview text are excluded from first-use expansion. Body counts as first use.",
+      "why_it_matters": "S-01 caps the subject at 50 characters, which makes expansion in a subject line effectively impossible."
+    },
+    {
+      "gap": "R-02 requires footer block 4.2, which contains 'TPN operational email', creating a first-use expansion conflict with T-04.",
+      "resolution": "Add R-07: the standard footer block is exempt from Section 2 terminology rules.",
+      "why_it_matters": "Every email would otherwise fail T-04 by way of its own required footer."
+    }
+  ],
+  "supporting_facts": {
+    "first_new_score_publishes": "15 October",
+    "retroactive_rescoring": false,
+    "non_completion_consequence": "held at current tier until completion is recorded, affects LAR prioritization",
+    "word_limit": 350,
+    "campaign_id": "TPN-0416"
+  },
+  "extraction_case": {
+    "id": "case-05-intake-extraction",
+    "source_file": "drafts/intake.md",
+    "difficulty": "sparse source, must return nulls rather than guess",
+    "expected_nulls": [
+      "segment",
+      "module_duration",
+      "measurement_window",
+      "tier_1_threshold",
+      "tier_2_threshold",
+      "tier_3_threshold",
+      "utm_campaign",
+      "unchanged_items",
+      "effective_date",
+      "action_deadline",
+      "incentive",
+      "module_location"
+    ],
+    "expected_values": {
+      "campaign_name": "SPI refresh (or similar)",
+      "type": null
+    },
+    "note": "Dana's message names the topic and little else. Passing this case means returning nulls, not plausible values. Any non-null date, threshold, or duration is a fabrication and a failure."
+  },
+  "file_map": {
+    "spec": "spec/tpn-email-standards.md",
+    "gold_set": "eval/gold-set.json",
+    "prompt_extract": "prompts/extract.md",
+    "prompt_conform": "prompts/conform.md",
+    "prompt_grade": "prompts/grade.md",
+    "changelog": "PROMPTS.md",
+    "drafts": {
+      "agency": "drafts/agency.md",
+      "recycled_q2": "drafts/recycled-q2.md",
+      "sme_notes": "drafts/sme-notes.md",
+      "bullets": "drafts/bullets.md",
+      "intake": "drafts/intake.md"
+    }
+  }
+}
