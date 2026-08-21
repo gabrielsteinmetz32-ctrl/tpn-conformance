@@ -5,7 +5,6 @@ against `eval/gold-set.json` via `scripts/score-gold-set.mjs`, which grades
 drafts as written — see the harness entry for why grading the pipeline's own
 output cannot be scored against the gold set.
 
-
 ---
 
 ## conform v1 (Wed 19 Aug)
