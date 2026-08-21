@@ -5,12 +5,10 @@ against `eval/gold-set.json` via `scripts/score-gold-set.mjs`, which grades
 drafts as written — see the harness entry for why grading the pipeline's own
 output cannot be scored against the gold set.
 
-Fill in the bracketed times from your own session. Everything else is
-recorded from actual runs.
 
 ---
 
-## conform v1 (Wed 19 Aug, [time])
+## conform v1 (Wed 19 Aug)
 
 First honest attempt. Single prompt, no campaign facts input.
 
@@ -28,7 +26,7 @@ Also added percent symbols to Tier thresholds, which are index scores.
 
 ---
 
-## conform v2 (Wed 19 Aug, [time])
+## conform v2 (Wed 19 Aug)
 
 **Changed:** added a closing sweep instruction to check every rule ID in
 the spec once.
@@ -45,7 +43,7 @@ output looked plausible enough that it took two runs to notice.
 
 ---
 
-## conform v3 (Wed 19 Aug, [time])
+## conform v3 (Wed 19 Aug)
 
 **Changed:**
 - Repasted the corrected spec
@@ -67,7 +65,7 @@ still not supplied at this point.
 
 ---
 
-## grade v1 (Wed 19 Aug, [time])
+## grade v1 (Wed 19 Aug)
 
 Separate prompt, separate call. Never sees `conform.md`.
 
@@ -85,7 +83,7 @@ a prose report alongside the JSON.
 
 ---
 
-## grade v2 (Wed 19 Aug, [time])
+## grade v2 (Wed 19 Aug)
 
 **Changed:**
 - Restated the grader schema explicitly, JSON only, no prose report
@@ -115,7 +113,7 @@ holding only the voice spec cannot see staleness.
 
 ---
 
-## extract v1 (Wed 19 Aug, [time])
+## extract v1 (Wed 19 Aug)
 
 **Gold set:** `extraction_case` against `02-intake-request.md`.
 
